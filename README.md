@@ -1,12 +1,6 @@
-# 📄 Zahra AI PDF — Chat with any PDF
+# 📄 AI CHAT PDF
 
 > Upload any PDF and have an intelligent AI-powered conversation with its content. Ask questions, get instant summaries, and find information in seconds.
-
-![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=flat-square&logo=next.js)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript)
-![Prisma](https://img.shields.io/badge/Prisma-7-2D3748?style=flat-square&logo=prisma)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-06B6D4?style=flat-square&logo=tailwindcss)
 
 ---
 
@@ -164,55 +158,8 @@ Response saved to PostgreSQL & displayed in UI
 
 ---
 
-## 📜 Database Schema
+## 📄 Author
 
-```prisma
-model User {
-  id      String  @id @default(uuid())
-  clerkId String  @unique
-  email   String  @unique
-  name    String?
-  chats   Chat[]
-  messages Message[]
-}
-
-model Chat {
-  id         String   @id @default(uuid())
-  fileName   String
-  fileSize   Int
-  mimeType   String
-  fileUrl    String
-  uploadedAt DateTime @default(now())
-  userId     String
-  message    Message[]
-}
-
-model Message {
-  id        String      @id @default(uuid())
-  role      MessageRole  // USER | SYSTEM
-  content   String
-  chatId    String
-  userId    String
-  createdAt DateTime    @default(now())
-}
-```
-
----
-
-## 📦 Available Scripts
-
-| Script | Description |
-|---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm run lint` | Run ESLint |
-| `npm run db:generate` | Generate Prisma client |
-| `npm run db:push` | Push schema to database |
-| `npm run db:migrate` | Run database migrations |
-
----
-
-## 📄 License
-
-This project is for educational/personal use. Feel free to fork and build on top of it!
+- M. Shiddiq Mukhlas
+- LinkedIn: https://www.linkedin.com/in/shiddiqmukhlas/
+- GitHub: https://github.com/shiddiqmukhlas
